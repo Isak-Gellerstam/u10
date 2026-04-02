@@ -21,125 +21,125 @@ import os
 import time
 
 # 1.
-# x = datetime.now()
-# print(x)
+x = datetime.now()
+print(x)
 
-# 2.
-# print(x.year)
-# print(x.strftime("%A"))
-# time.sleep(2)
+2.
+print(x.year)
+print(x.strftime("%A"))
+time.sleep(2)
 
 # 3.
-# while True:
+while True:
     
-#     os.system('cls')
-#     x = datetime.now()
-#     print(x.strftime("%c"))
-#     time.sleep(1)
+    os.system('cls')
+    x = datetime.now()
+    print(x.strftime("%c"))
+    time.sleep(1)
     
 # 4.
 
-# start_time = time.time()    
+start_time = time.time()    
 
-# while True:
+while True:
 
-#     os.system('cls')
+    os.system('cls')
 
-#     current_time = time.time()
+    current_time = time.time()
 
-#     elapsed_time = current_time - start_time
+    elapsed_time = current_time - start_time
 
-#     if elapsed_time < 0:
-#         elapsed_time = 0
+    if elapsed_time < 0:
+        elapsed_time = 0
 
-#     elapsed_time_tuple = time.localtime(elapsed_time)
+    elapsed_time_tuple = time.localtime(elapsed_time)
 
-#     elapsed_time_formatted = time.strftime("%M:%S", elapsed_time_tuple)
-
-
-#     print("Elapsed time:", elapsed_time_formatted)
+    elapsed_time_formatted = time.strftime("%M:%S", elapsed_time_tuple)
 
 
+    print("Elapsed time:", elapsed_time_formatted)
 
-#     time.sleep(1)
+
+
+    time.sleep(1)
 
 
 # 5.
 
 
 
-# import random
+import random
 
-# running = True
+running = True
 
-# start_time = time.time()   
+start_time = time.time()   
 
-# while running:          
-#     os.system('cls')        
-#     number = random.randint(1,100)         
-#     tries = 7
+while running:          
+    os.system('cls')        
+    number = random.randint(1,100)         
+    tries = 7
 
-#     print(
-#         f""
-#         "---Gissa ett talet mällan 1 och 100---\n" 
-#         " ---Skriv talet 0 för att avsluta---\n" 
-#         "     ---Du har sju gissningar---\n"
-#     )
+    print(
+        f""
+        "---Gissa ett talet mällan 1 och 100---\n" 
+        " ---Skriv talet 0 för att avsluta---\n" 
+        "     ---Du har sju gissningar---\n"
+    )
 
-#     print(number)
+    print(number)
 
-#     while tries > 0:
-#         try:    
-#             guess = int(input(f"Skriv din gisning :"))
-#         except:        
-#             print(f"\nSkriv en sifra IDIOT\n")
-#             continue          
+    while tries > 0:
+        try:    
+            guess = int(input(f"Skriv din gisning :"))
+        except:        
+            print(f"\nSkriv en sifra IDIOT\n")
+            continue          
 
-#         if guess == 0:      
-#             print(f"\nSpelet avslutat\n")
-#             running = False
-#             break
+        if guess == 0:      
+            print(f"\nSpelet avslutat\n")
+            running = False
+            break
 
-#         tries -= 1  
+        tries -= 1  
 
-#         if guess == number:
-#             print(f"\n--- Du gissade rätt! ---")
-#             print(f"\nMed {tries} gissningar kvar")
+        if guess == number:
+            print(f"\n--- Du gissade rätt! ---")
+            print(f"\nMed {tries} gissningar kvar")
 
-#             current_time = time.time()
+            current_time = time.time()
 
-#             elapsed_time = current_time - start_time
+            elapsed_time = current_time - start_time
 
-#             if elapsed_time < 0:
-#                 elapsed_time = 0
+            if elapsed_time < 0:
+                elapsed_time = 0
 
-#             elapsed_time_tuple = time.localtime(elapsed_time)
+            elapsed_time_tuple = time.localtime(elapsed_time)
 
-#             elapsed_time_formatted = time.strftime("%M:%S", elapsed_time_tuple)
-
-
-#             print("Elapsed time:", elapsed_time_formatted)
-#             break
-
-#         if tries == 0:
-#             print(f"\n--- Du förlorade! --- ")
-#             print(f"\nTalet var: {number}")
-#             break
-
-#         elif guess < number:
-#             print(f"\nTalet är högre")
-#         else:
-#             print(f"\nTalet är lägre") 
-
-#         print(f"{tries} Gånger kvar\n")
+            elapsed_time_formatted = time.strftime("%M:%S", elapsed_time_tuple)
 
 
-#     if not running:
-#         break
+            print("Elapsed time:", elapsed_time_formatted)
+            break
 
-#     again = input(f"\nVill du spela i gen | JA = Enter | / | NEJ = N | :")
-#     if again.upper() == "N":         #Slutar spel lopen om man vill det 
-#         running = False
+        if tries == 0:
+            print(f"\n--- Du förlorade! --- ")
+            print(f"\nTalet var: {number}")
+            break
+
+        elif guess < number:
+            print(f"\nTalet är högre")
+        else:
+            print(f"\nTalet är lägre") 
+
+        print(f"{tries} Gånger kvar\n")
+
+
+    if not running:
+        break
+
+    again = input(f"\nVill du spela i gen | JA = Enter | / | NEJ = N | :")
+    if again.upper() == "N":         #Slutar spel lopen om man vill det 
+        running = False
 
 # 6.
 
