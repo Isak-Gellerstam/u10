@@ -141,3 +141,19 @@ import time
 #     if again.upper() == "N":         #Slutar spel lopen om man vill det 
 #         running = False
 
+# 6.
+
+
+year = int(input("skriv år (ex 2020) : "))
+mon = int(input("skriv månad (1 - 12) : "))
+day = int(input("skriv dag (1 - 31) : "))
+
+given_date = datetime(year, mon, day)
+
+todays_date = datetime.now()
+
+differens = given_date - todays_date 
+
+print(f"\n{differens.days} dagar till datumet")
+
+
